@@ -1,0 +1,18 @@
+<h1 class="display-6 mt-4">Welcome!</h1>
+<div class="jumbotron mt-4">
+    <p>You Have Clicked <a class="btn btn-secondary btn-sm" (click)="onClick()">this</a>{{" "+count}} Times</p>
+</div>
+
+<div class="jumbotron mt-4">
+    <p>
+        <input type="text" [(ngModel)] = "name" placeholder="Enter Something">
+    </p>
+    <p>You Said: {{ name }}</p>
+</div>
+
+<div class="jumbotron mt-4">
+    <div *ngIf="count > 4; else elseBlock">
+        Button Press More than 4 Times
+    </div>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
+</div>
